@@ -194,6 +194,11 @@ main {
     }
 
     
-
+    .button:is(:focus, :active)  {
+        background-color: hsl(25, 97%, 53%);
+        color: white;
+        outline: none;
+        transform: scale(1.1); 
+    } 
 
 }
