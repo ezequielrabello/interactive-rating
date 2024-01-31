@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%; 
+    --White: hsl(0, 0%, 100%);
+    --Light_Grey: hsl(217, 12%, 63%);
+    --Medium_Grey: hsl(216, 12%, 54%);
+    --Dark_Blue: hsl(213, 19%, 18%);
+    --Very_DarkBlue: hsl(216, 12%, 8%);
+    --Orange: hsl(25, 97%, 53%);
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Overpass", sans-serif;
+    background-color: var(--Very_DarkBlue);
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    /* grid-template-rows: max-content max-content 1fr; */
+}
+
+main {
+    max-width: 35.5rem;
+    margin: 15rem auto; 
+    background: linear-gradient(hsl(210, 9%, 31%),var(--Dark_Blue));
+    border-radius: 1rem;
+    padding: 2.4rem;
+
+}
+
+.star {
+    padding: 1.2rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    background-color: hsl(213, 5%, 34%);
+}
+
+.texts h1 {
+    color: var(--White);
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.texts p {
+    color: var(--Light_Grey);
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.buttons {
+    
+    display: flex;
+    justify-content: space-between; 
+    
+}
+
+.button {
+    border-radius: 50%;
+    padding: 1.7rem 2rem;
+    cursor: pointer;
+    width: 5rem;
+    margin-bottom: 3rem;
+    background-color: hsl(213, 5%, 34%);
+    text-align: center;
+    color: var(--Light_Grey);
+    font-weight: 700;
+    border: none;
+}
+    
+
+.button:is(:focus, :active)  {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+    outline: none;
+    transform: scale(1.1); 
+} 
+
+
+#submit_Bto {
+    padding: 1.2rem;
+    border-radius: 5rem;
+    border: none;
+    background-color: var(--Orange); 
+    /* background: linear-gradient(hsl(25, 89%, 67%),hsl(25, 97%, 53%)); */
+    color: var(--White);
+    font-weight: 700;
+    font-size: 1.8rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+#submit_Bto:hover {
+    background: linear-gradient(hsl(25, 88%, 63%),hsl(25, 97%, 53%));
+}
+
+.attribution {
+    font-size: 1.1rem;
+    color: hsl(228, 45%, 44%);
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.secondPage_on {
+    visibility: hidden;
+}
+
+.screen2 {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+
+    width: 35.5rem;
+    margin: 16rem auto 18rem;
+    background: linear-gradient(hsl(210, 9%, 31%),var(--Dark_Blue));
+    border-radius: 1rem;
+    padding: 2.4rem;
+    height: 60vh;
+}
+
+.close {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+.tks {
+    margin: 4rem auto 0;
+}
+
+.texts .orange {
+    color: var(--Orange);
+    background-color: hsl(213, 8%, 28%); 
+    width: max-content;
+    border-radius: 4rem;
+    padding: .5rem 1rem;
+    margin: 2rem auto 2rem;
+    font-size: 1.5rem;
+}
+
+.thank_you {
+    text-align: center;
+}
+
+
+
+
+.button:hover {
+    transition-duration: 100ms; 
+    transform: scale(1.1);
+}  
+
+
+@media(min-width: 600px) {
+   
+    main {
+        min-width: 50rem;
+    }
+    
+    .screen2 {
+        min-width: 50rem;
+        padding: 20rem 0;
+    }
+
+    .texts h1 {
+    
+        font-size: 3.8rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .texts p {
+        
+        font-size: 2.0rem;
+        margin-bottom: 4rem;
+    }
+       
+    .star {
+        padding: 2.2rem;
+    }
+
+    .button {
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        padding: 2.7rem 2.5rem;
+        cursor: pointer;
+        width: 7rem;
+        margin-bottom: 4rem;
+        text-align: center;
+      
+    }
+
+    
+
+
+}
